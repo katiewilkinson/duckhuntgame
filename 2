@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Duck Hunt Game</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="libs.min.js"></script>
+<script src="min.js"></script>
+<script src="main.js"></script>
+<style>
+</style>
+</head>
+<body>
+
+
+
+
+<div id="gameField" class="gameField">
+
+
+<div id="game" class="game">
+    <div id="theFlash" class="theFlash"></div>
+    <div id="tree" class="tree"></div>
+    <div id="grass" class="grass"></div>
+</div>
+<div class="gameinfo ammo" id="ammo"></div>
+<div class="gameinfo waves" id="waves"></div>
+<div class="gameinfo duckBoard" id="duckBoard"></div>
+<div class="gameinfo scoreboard" id="scoreboard"></div>
+
+<div id="loser" class="messages loser">
+You Lose!
+<br/><br/>
+<div class="tryAgain">Try Again</div>
+</div>
+
+
+<div id="winner" class="messages winner">
+You are a champion!
+</div>
+
+
+<div id="level" class="messages level">
+Level 1
+</div>
+
+</div>
+
+
+
+<div id="info"></div>
+
+<audio class="sounds" id="gunSound" preload="auto">
+    <source type="audio/ogg" src="sounds/gunSound.ogg"/>
+    <source type="audio/mp3" src="sounds/gunSound.mp3"/>
+</audio>
+
+<audio class="sounds" id="gunSound2" preload="auto">
+    <source type="audio/ogg" src="sounds/gunSound2.ogg"/>
+    <source type="audio/mp3" src="sounds/gunSound2.mp3"/>
+</audio>
+
+<audio class="sounds" id="laugh" preload="auto">
+    <source type="audio/ogg" src="sounds/laugh.ogg"/>
+    <source type="audio/mp3" src="sounds/laugh.mp3"/>
+</audio>
+
+<audio class="sounds" id="quak" preload="auto">
+    <source type="audio/ogg" src="sounds/quak.ogg"/>
+    <source type="audio/mp3" src="sounds/quak.mp3"/>
+</audio>
+
+<audio class="sounds" id="thud" preload="auto">
+    <source type="audio/ogg" src="sounds/thud.ogg"/>
+    <source type="audio/mp3" src="sounds/thud.mp3"/>
+</audio>
+
+<audio class="sounds" id="ohyeah" preload="auto">
+    <source type="audio/ogg" src="sounds/ohYeah.ogg"/>
+    <source type="audio/mp3" src="sounds/ohYeah.mp3"/>
+</audio>
+
+<audio class="sounds" id="quacking" loop>
+    <source type="audio/ogg" src="sounds/quacking.ogg"/>
+    <source type="audio/mp3" src="sounds/quacking.mp3"/>
+</audio>
+
+<audio class="sounds" id="sniff" preload="auto">
+    <source type="audio/ogg" src="sounds/sniff.ogg"/>
+    <source type="audio/mp3" src="sounds/sniff.mp3"/>
+</audio>
+
+<audio class="sounds" id="bark" preload="auto">
+    <source type="audio/ogg" src="sounds/barkDucks.ogg"/>
+    <source type="audio/mp3" src="sounds/barkDucks.mp3"/>
+</audio>
+
+<audio class="sounds" id="victory" preload="auto">
+    <source type="audio/ogg" src="sounds/champ.ogg"/>
+    <source type="audio/mp3" src="sounds/champ.mp3"/>
+</audio>
+
+<audio class="sounds" id="defeat" preload="auto">
+    <source type="audio/ogg" src="sounds/loserSound.ogg"/>
+    <source type="audio/mp3" src="sounds/loserSound.mp3"/>
+</audio>
+
+<script type="text/javascript">
+  var _gap = _gap || [];
+
+  // Standard Google Analytics pushes, just with _gap.push.
+  // You can push anything, just like normal, via _gap.push instead of _gaq.push.
+  _gap.push(['_setAccount', 'UA-49232079-1']);
+  _gap.push(['_trackPageview']);
+
+  // With both bounce trackers active, any user who scrolls down 50% OR
+  // stays 10 seconds is not counted as a bounce. You can use just one, or none.
+  _gap.push(['_gapTrackBounceViaTime', 10]); // Optionally change (min seconds).
+  _gap.push(['_gapTrackBounceViaScroll', 50]); // Optionally change (min percentage).
+
+  // Every 20 seconds, push a read event so that time on site is more accurate.
+  // Only allow 30 of these read events per page.
+  _gap.push(['_gapTrackReads', 20, 30]); // Optionally change (cadence and max read events per page).
+
+  // Anytime a user clicks a link, internal or external, push the event.
+  _gap.push(['_gapTrackLinkClicks']);
+
+  // Push the maximum percentage scrolled.
+  _gap.push(['_gapTrackMaxScroll', 25]); // Optionally change (min percentage).
+
+  (function() {
+    var gap = document.createElement('script');
+    gap.async = true;
+    gap.type = 'text/javascript';
+    gap.src = 'gap.min.js';
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gap, s);
+  })();
+</script>
+
+</body>
+</html>
+
+
+
